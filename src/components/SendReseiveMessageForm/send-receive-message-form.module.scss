@@ -1,0 +1,19 @@
+.inner {
+  color: #3B4A78;
+  display: flex;
+  height: calc(100vh - 83px);
+  background-color: #EFEAE2;
+}
+
+.navigation {
+  flex: 30%;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.messages {
+  flex: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

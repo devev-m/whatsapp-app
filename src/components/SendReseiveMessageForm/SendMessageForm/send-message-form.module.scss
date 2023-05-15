@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F0F2F5;
+  padding: 15px;
+}
+
+.input {
+  flex: 1;
+  font-size: 14px;
+  padding: 15px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.button {
+  border: none;
+  background-color: #fff;
+  padding: 9px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}

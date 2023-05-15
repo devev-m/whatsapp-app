@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import s from './app.module.scss';
 import { LoginForm } from '../LoginForm/LoginForm';
-import { ChatForm } from '../ChatForm/ChatForm';
+import { Chat } from '../Chat/Chat';
 
 const App = () => {
   const [idInstance, setIdInstance] = useState('');
   const [apiTokenInstance, setApiTokenInstance] = useState('');
 
   const handleFormSubmit = (idInstance, apiTokenInstance) => {
-    setIdInstance(idInstance);
-    setApiTokenInstance(apiTokenInstance);
+    setIdInstance(idInstance.trim());
+    setApiTokenInstance(apiTokenInstance.trim());
   };
 
   return (
@@ -17,7 +17,7 @@ const App = () => {
       <h1 className={s.title}>WhatsApp App</h1>
 
       {idInstance || apiTokenInstance ? (
-        <ChatForm
+        <Chat
           idInstance={idInstance}
           apiTokenInstance={apiTokenInstance}
         />
