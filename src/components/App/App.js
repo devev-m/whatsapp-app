@@ -16,7 +16,14 @@ const App = () => {
     <div className={s.wrapper}>
       <h1 className={s.title}>WhatsApp App</h1>
 
-      {idInstance || apiTokenInstance ? <ChatForm /> : <LoginForm onSubmit={handleFormSubmit} />}
+      {idInstance || apiTokenInstance ? (
+        <ChatForm
+          idInstance={idInstance}
+          apiTokenInstance={apiTokenInstance}
+        />
+      ) : (
+        <LoginForm onSubmit={handleFormSubmit} />
+      )}
     </div>
   );
 };
